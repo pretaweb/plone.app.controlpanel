@@ -3,6 +3,11 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:browser="http://namespaces.zope.org/browser">
 
+  <!-- XXX: Move to CMFPlone -->
   <include file="permissions.zcml" />
+
+  <!-- XXX: This is used at least in plone.app.users -->
+  <subscriber
+     handler=".events.handleConfigurationChangedEvent" />
 
 </configure>
